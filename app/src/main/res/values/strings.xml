@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LightUp</string>
+    <string name="light_up">Light Up</string>
+    <string name="light_up_fail">Fail Lighting Up</string>
 </resources>
