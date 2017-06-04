@@ -7,13 +7,31 @@
     tools:context="com.beibeilab.lightup.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/text_intro1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="160dp"
+        android:text="@string/intro_message"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/intro_message" />
+
+    <TextView
+        android:id="@+id/text_inro2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/intro_message2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/text_intro1"
+        app:layout_constraintStart_toStartOf="@+id/text_intro1"
+        app:layout_constraintTop_toBottomOf="@+id/text_intro1"
+        tools:text="@string/intro_message2" />
 
     <Button
         android:id="@+id/button"
@@ -21,24 +39,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:onClick="buttonClicked"
-        android:text="Button"
+        android:text="@string/ask_permission"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:onClick="buttonClicked"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/text_inro2"
+        tools:text="@string/ask_permission" />
 
 </android.support.constraint.ConstraintLayout>

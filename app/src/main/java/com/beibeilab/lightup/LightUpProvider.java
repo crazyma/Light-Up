@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 

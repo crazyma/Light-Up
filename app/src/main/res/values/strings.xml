@@ -2,4 +2,8 @@
     <string name="app_name">LightUp</string>
     <string name="light_up">Light Up</string>
     <string name="light_up_fail">Fail Lighting Up</string>
+    <string name="intro_message">這是一個 Widget App \n其功用是可以把螢幕亮度調到最亮</string>
+    <string name="intro_message2">為了啟用此效果，請先點擊下面的按鈕\n允許『修改系統設定』之權限</string>
+    <string name="intro_message3">你已經允許『修改系統設定』\n請至小工具中加入 Light Up 小工具到桌面即可使用</string>
+    <string name="ask_permission">請求權限</string>
 </resources>
