@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setupStatusBar();
 
         mTextIntro2 = (TextView) findViewById(R.id.text_inro2);
         mButton = (Button) findViewById(R.id.button);
@@ -34,6 +38,22 @@ public class MainActivity extends AppCompatActivity {
             mTextIntro2.setText(R.string.intro_message2);
             mButton.setVisibility(View.VISIBLE);
         }
+    }
+
+    /**
+     * https://stackoverflow.com/questions/22192291/how-to-change-the-status-bar-color-in-android
+     */
+    private void setupStatusBar(){
+        Window window = getWindow();
+
+        // clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+        // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+        // finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.gray));
     }
 
     private boolean checkSystemCanWrite(){
