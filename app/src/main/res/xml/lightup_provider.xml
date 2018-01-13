@@ -3,6 +3,6 @@
     android:initialLayout="@layout/layout_widget"
     android:minHeight="@dimen/widget_width"
     android:minWidth="@dimen/widget_width"
-    android:previewImage="@drawable/lightbulb2"
+    android:previewImage="@drawable/ic_widget_launcher"
     android:resizeMode="none"
     android:updatePeriodMillis="600000" />
